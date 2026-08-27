@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#0c4a56"/><path d="M2 26h28C24 24 20 18 16 10 12 18 8 24 2 26Z" fill="#c9a227"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="#0a0908"/>
+  <rect x="3.5" y="8" width="25" height="16" fill="none" stroke="#f4f1ea" stroke-width="1.6"/>
+  <text x="16" y="19.5" text-anchor="middle" font-family="Arial Narrow, Helvetica Neue, sans-serif" font-size="9" font-weight="700" fill="#f4f1ea">AKL</text>
+</svg>

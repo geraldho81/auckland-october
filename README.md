@@ -4,23 +4,9 @@ A single-page itinerary site for Gerald Ho trip to Auckland / Tamaki Makaurau. F
 
 Dates are still TBA, sometime in October.
 
-## How to run locally
-
-```
-npm install && npm run dev
-```
-
-Open http://localhost:3000
-
-## Build
-
-```
-npm run build
-```
-
 ## Stack
 
-Next.js App Router, TypeScript, Tailwind CSS, next/image, lucide-react, Fraunces and Manrope.
+Next.js App Router, TypeScript, Tailwind CSS, next/image, lucide-react, Barlow Condensed and Source Sans 3.
 
 ## Note
 

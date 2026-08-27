@@ -1,36 +1,44 @@
 import Image from "next/image";
 import { hero, photos } from "@/lib/content";
-import { RangitotoMark } from "./RangitotoMark";
 
 export function Hero() {
   return (
-    <header id="top" className="relative min-h-[92svh] overflow-hidden bg-ink text-foam">
-      <Image
-        src={photos.harbourNight.src}
-        alt={photos.harbourNight.alt}
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-center"
-      />
-      <div
-        className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/25"
-        aria-hidden
-      />
-      <div className="relative mx-auto flex min-h-[92svh] max-w-6xl flex-col justify-end px-4 pb-16 pt-28 md:px-6 md:pb-20">
-        <p className="hero-rise font-body text-sm font-semibold tracking-[0.22em] text-kowhai uppercase">
+    <header id="top" className="bg-sand text-foam">
+      <div className="relative h-[78svh] min-h-[28rem] w-full bg-basalt">
+        <Image
+          src={photos.harbourNight.src}
+          alt={photos.harbourNight.alt}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <p className="absolute right-3 bottom-3 inline-flex min-h-11 items-center bg-sand px-3 text-xs text-mist">
+          Photo{" "}
+          <a
+            href={photos.harbourNight.href}
+            className="underline decoration-iron underline-offset-2 hover:text-foam"
+          >
+            {photos.harbourNight.credit}
+          </a>
+        </p>
+      </div>
+
+      <div className="relative z-10 mx-4 -mt-16 max-w-4xl border-2 border-foam bg-sand px-5 py-6 sm:mx-6 sm:px-8 sm:py-8 md:-mt-24 md:mx-10 md:px-10 md:py-10">
+        <p className="flex items-center gap-3 font-display text-base uppercase text-mist">
+          <span
+            className="inline-block h-2.5 w-2.5 shrink-0 bg-spring"
+            aria-hidden
+          />
           {hero.kicker}
         </p>
-        <h1 className="hero-rise hero-rise-delay-1 mt-4 max-w-3xl font-display text-4xl font-medium leading-[1.08] text-foam sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="mt-4 font-display text-4xl leading-[0.92] font-semibold uppercase sm:text-5xl md:text-6xl lg:text-7xl">
           {hero.titleHtml}
         </h1>
-        <p className="hero-rise hero-rise-delay-2 mt-6 max-w-xl text-base leading-relaxed text-foam/90 md:text-lg">
+        <p className="mt-6 max-w-xl text-base leading-relaxed text-foam md:text-lg">
           {hero.sub}
         </p>
-        <p className="hero-rise hero-rise-delay-3 mt-6 text-sm text-foam/75">{hero.byline}</p>
-        <div className="hero-rise hero-rise-delay-3 mt-10 text-kowhai">
-          <RangitotoMark className="h-10 w-40 md:h-12 md:w-48" title="Rangitoto silhouette" />
-        </div>
+        <p className="mt-5 text-sm text-mist">{hero.byline}</p>
       </div>
     </header>
   );

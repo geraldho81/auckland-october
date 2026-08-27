@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { Fraunces, Manrope } from "next/font/google";
+import { Barlow_Condensed, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const barlow = Barlow_Condensed({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-fraunces",
+  weight: ["500", "600", "700"],
+  variable: "--font-barlow",
   display: "swap",
 });
 
-const manrope = Manrope({
+const source = Source_Sans_3({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-manrope",
+  variable: "--font-source",
   display: "swap",
 });
 
@@ -27,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${manrope.variable}`}>
-      <body className="bg-mist text-ink font-body antialiased">{children}</body>
+    <html lang="en" className={`${barlow.variable} ${source.variable}`}>
+      <body className="bg-sand text-foam font-body antialiased">{children}</body>
     </html>
   );
 }
